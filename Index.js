@@ -8,7 +8,7 @@ require("dotenv").config()
 const app = express();
 app.use(express.json());
 app.use(cors());
-const PORT = process.env.PORT || 5000;
+
 mongoose.set('strictQuery',false);
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI)
@@ -68,6 +68,7 @@ app.put('/user:id', async (req, res) => {
 });
 
 // Start the server
+const PORT = process.env.PORT
 app.listen(PORT, () => {
   console.log('Server listening on port 5000');
 });
