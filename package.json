@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "Index.js",
+  "homepage": "https://Ramesh7032.github.io/Task-Manager_",
   "scripts": {
     "dev": "nodemon Index.js",
-    "start": "node Index.js"
+    "start": "node Index.js",
+    "predeploy" : "npm run build",
+"deploy" : "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
